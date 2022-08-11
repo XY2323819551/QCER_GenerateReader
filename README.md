@@ -1,7 +1,7 @@
 # QCER_GenerateReader
 Part of generate reader for [QCER](https://github.com/XY2323819551/QCER_for_OpenQA).
 
-#### 环境配置
+## 环境配置
 
 ```
 conda create -n env_name python=3.8
@@ -9,7 +9,7 @@ pip install torch==1.8.1+cu111 -f https://download.pytorch.org/whl/torch_stable.
 pip install transformers==3.0.2
 ```
 
-#### 进行reader Inference
+## 进行reader Inference
 
 将pyserini的检索结果（BM25、DPR、hybrid）作为reader的输入，使用下述命令进行答案推理
 ```
@@ -30,7 +30,9 @@ $ python test_reader.py --model_path checkpoint_dir/my_experiment/my_model_dir/c
 ```
 python reader_test.py --model_path /home/zhangxy/QA/FID-main/pretrained_models/nq_reader_base --eval_data /home/zhangxy/QA/FID-main/download/nq/run.dpr.nq-test.hybrid.json --per_gpu_batch_size 16 --n_context 1 --name nq_base_test --write_results
 ```
-#### 修改预测答案的数量
+## 其他
+
+**修改预测答案的数量**
 
 在FID-main/src/model.py的generate()模型中添加两个参数
 
