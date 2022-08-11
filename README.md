@@ -21,7 +21,9 @@ $ python test_reader.py --model_path checkpoint_dir/my_experiment/my_model_dir/c
                         --checkpoint_dir checkpoint \
 ```
 `--model_path`所使用的checkpoint的路径.
+
 `--eval_data`pyserini的检索结果文件.
+
 `--per_gpu_batch_size`设置为1即可.
 
 运行示例
@@ -31,6 +33,9 @@ python reader_test.py --model_path /home/zhangxy/QA/FID-main/pretrained_models/n
 #### 修改预测答案的数量
 
 在FID-main/src/model.py的generate()模型中添加两个参数
+
 num_beams=k1 (k1>k)
+
 num_return_sequences=k
+
 num_beams一定要大于num_return_sequences，否则会报错。其中num_return_sequences的值即保留的top-n predictions.
