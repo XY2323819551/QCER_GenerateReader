@@ -1,5 +1,5 @@
 # QCER_GenerateReader
-Part of generate reader for QCER.
+Part of generate reader for [QCER](https://github.com/XY2323819551/QCER_for_OpenQA).
 
 #### 环境配置
 
