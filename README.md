@@ -31,7 +31,6 @@ python reader_test.py --model_path /home/zhangxy/QA/FID-main/pretrained_models/n
 #### 修改预测答案的数量
 
 在FID-main/src/model.py的generate()模型中添加两个参数
-num_beams=6
-num_return_sequences=5
-
+num_beams=k1 (k1>k)
+num_return_sequences=k
 num_beams一定要大于num_return_sequences，否则会报错。其中num_return_sequences的值即保留的top-n predictions.
