@@ -28,13 +28,13 @@ $ python test_reader.py --model_path checkpoint_dir/my_experiment/my_model_dir/c
 
 运行示例
 ```
-python reader_test.py --model_path /home/zhangxy/QA/FID-main/pretrained_models/nq_reader_base --eval_data /home/zhangxy/QA/FID-main/download/nq/run.dpr.nq-test.hybrid.json --per_gpu_batch_size 16 --n_context 1 --name nq_base_test --write_results
+python reader_test.py --model_path pretrained_models/nq_reader_base --eval_data download/nq/run.dpr.nq-test.hybrid.json --per_gpu_batch_size 16 --n_context 100 --name nq_base_test --write_results
 ```
 ## 其他
 
 **修改预测答案的数量**
 
-在FID-main/src/model.py的generate()模型中添加两个参数
+在FID-main/src/model.py的generate()模型中添加两个参数：
 
 num_beams=k1 (k1>k)
 
